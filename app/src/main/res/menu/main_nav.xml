@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/nav_profile"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_profile"/>
+
+    <item android:id="@+id/nav_forex"
+        android:title="@string/forex"
+        android:icon="@drawable/ic_exchange"/>
+
+    <item android:id="@+id/nav_binaryOptions"
+        android:title="@string/binary_options"
+        android:icon="@drawable/ic_binary"/>
+
+    <item android:id="@+id/nav_futures"
+        android:title="@string/futures"
+        android:icon="@drawable/ic_futures"/>
+
+    <item android:id="@+id/nav_actions"
+        android:title="@string/actions"
+        android:icon="@drawable/ic_actions"/>
+
+    <item android:id="@+id/nav_configuration"
+        android:title="@string/configuration"
+        android:icon="@drawable/ic_settings"/>
+
+    <item android:id="@+id/nav_logout"
+        android:title="@string/logout"
+        android:icon="@drawable/ic_logout"/>
+
+
+</menu>

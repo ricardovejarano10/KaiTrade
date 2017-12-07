@@ -9,4 +9,14 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="forex">Forex</string>
+    <string name="binary_options">Binary Options</string>
+    <string name="futures">Futures</string>
+    <string name="actions">Actions</string>
+    <string name="cfds">Cfd\'s</string>
+    <string name="configuration">Configuration</string>
+    <string name="logout">Logout</string>
+    <string name="open_menu">open_menu</string>
+    <string name="close_menu">close_menu</string>
 </resources>
