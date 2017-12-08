@@ -20,4 +20,5 @@
     <string name="open_menu">open_menu</string>
     <string name="close_menu">close_menu</string>
     <string name="tituloHistory">History</string>
+    <string name="about">about</string>
 </resources>

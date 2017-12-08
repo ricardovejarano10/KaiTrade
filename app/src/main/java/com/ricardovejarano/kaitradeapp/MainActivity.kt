@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
             R.id.nav_configuration -> {
                 transaction.replace(R.id.content, ConfigurationFragment()).commit()
                 val ab = supportActionBar
-                ab?.setTitle("Configuration").toString()
+                ab?.setTitle("About").toString()
             }
             R.id.nav_logout -> {
                 startActivity(intent)

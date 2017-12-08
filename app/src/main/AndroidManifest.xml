@@ -24,7 +24,8 @@
         </activity>
         <activity android:name=".LoginActivity"
             android:theme="@style/Theme.Design.NoActionBar"/>
-        <activity android:name=".SignUpActivity"/>
+        <activity android:name=".SignUpActivity"
+            android:theme="@style/Theme.Design.NoActionBar"/>
     </application>
 
 </manifest>
