@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
         val transaction = manager.beginTransaction()
         transaction.replace(R.id.content, CompoundFragment()).commit()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        val ab = supportActionBar
+        ab?.setTitle("Compound").toString()
         drawer.addDrawerListener(this)
         nav.setNavigationItemSelectedListener {setContent(it)}
     }
@@ -70,16 +72,22 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
             R.id.navigation_compound -> {
                 drawer.closeDrawers()
                 transaction.replace(R.id.content, CompoundFragment()).commit()
+                val ab = supportActionBar
+                ab?.setTitle("Compound").toString()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_history -> {
                 drawer.closeDrawers()
                 transaction.replace(R.id.content, HistoryFragment()).commit()
+                val ab = supportActionBar
+                ab?.setTitle("History").toString()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_charts -> {
                 drawer.closeDrawers()
                 transaction.replace(R.id.content, ChartsFragment()).commit()
+                val ab = supportActionBar
+                ab?.setTitle("Charts").toString()
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -93,13 +101,41 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
         val intent = Intent(this, LoginActivity::class.java)
         when(item?.itemId){
 
-            R.id.nav_profile -> transaction.replace(R.id.content, UserProfileFragment()).commit()
-            R.id.nav_forex -> transaction.replace(R.id.content, ForexInfoFragment()).commit()
-            R.id.nav_binaryOptions -> transaction.replace(R.id.content, BinaryOptionsInfoFragment()).commit()
-            R.id.nav_futures -> transaction.replace(R.id.content, FuturesInfoFragment()).commit()
-            R.id.nav_actions -> transaction.replace(R.id.content, ActionsInfoFragment()).commit()
-            R.id.nav_configuration -> transaction.replace(R.id.content, ConfigurationFragment()).commit()
-            R.id.nav_logout -> startActivity(intent)
+            R.id.nav_profile -> {
+                transaction.replace(R.id.content, UserProfileFragment()).commit()
+                val ab = supportActionBar
+                ab?.setTitle("Profile").toString()
+            }
+
+            R.id.nav_forex ->{
+            transaction.replace(R.id.content, ForexInfoFragment()).commit()
+                val ab = supportActionBar
+                ab?.setTitle("Forex").toString()
+            }
+
+            R.id.nav_binaryOptions ->{
+                transaction.replace(R.id.content, BinaryOptionsInfoFragment()).commit()
+                val ab = supportActionBar
+                ab?.setTitle("Binary Options").toString()
+            }
+            R.id.nav_futures ->{
+                transaction.replace(R.id.content, FuturesInfoFragment()).commit()
+                val ab = supportActionBar
+                ab?.setTitle("Futures").toString()
+            }
+            R.id.nav_actions -> {
+                transaction.replace(R.id.content, ActionsInfoFragment()).commit()
+                val ab = supportActionBar
+                ab?.setTitle("Actions").toString()
+            }
+            R.id.nav_configuration -> {
+                transaction.replace(R.id.content, ConfigurationFragment()).commit()
+                val ab = supportActionBar
+                ab?.setTitle("Configuration").toString()
+            }
+            R.id.nav_logout -> {
+                startActivity(intent)
+            }
 
         }
 
