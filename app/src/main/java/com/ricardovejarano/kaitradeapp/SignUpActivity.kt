@@ -2,18 +2,11 @@ package com.ricardovejarano.kaitradeapp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.content.Intent
 
-
-
-class SplashActivity : AppCompatActivity() {
+class SignUpActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
-        finish()
+        setContentView(R.layout.activity_sign_up)
     }
 }
