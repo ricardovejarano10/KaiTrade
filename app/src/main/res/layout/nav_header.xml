@@ -3,13 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="@dimen/header"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:padding="@dimen/veintedps"
     android:background="@drawable/gradient">
     
     <ImageView
         android:src="@drawable/newuser"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="@dimen/setentaycincodps"
+        android:layout_height="@dimen/setentaycincodps"
         android:layout_gravity="center"
         android:gravity="center"/>
 
@@ -20,11 +20,6 @@
         android:textStyle="bold"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="8dp"
-        android:text="New User"/>
-
-    
-
-
-
+        android:layout_marginTop="@dimen/ochodps"
+        android:text="@string/new_user"/>
 </LinearLayout>

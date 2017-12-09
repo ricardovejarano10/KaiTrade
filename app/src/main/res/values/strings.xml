@@ -7,7 +7,6 @@
     <string name="title_history">History</string>
     <string name="title_charts">Charts</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="profile">Profile</string>
     <string name="forex">Forex</string>
@@ -21,4 +20,27 @@
     <string name="close_menu">close_menu</string>
     <string name="tituloHistory">History</string>
     <string name="about">about</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="new_user">New User</string>
+    <string name="forex_description">Forex, also known as foreign exchange, FX or currency trading, is a decentralized global market where all the world\'s currencies trade. The forex market is the largest, most liquid market in the world with an average daily trading volume exceeding $5 trillion. All the world\'s combined stock markets don\'t even come close to this. But what does that mean to you? Take a closer look at forex trading and you may find some exciting trading opportunities unavailable with other investments.</string>
+    <string name="binary_options_market">Binary Options Market</string>
+    <string name="binary_options_description">Binary options are classed as exotic options, yet binaries are extremely simple to use and understand functionally. The most common binary option is a \"high-low\" option. Providing access to stocks, indices, commodities and foreign exchange, a high-low binary option is also called a fixed-return option. This is because the option has an expiry date/time and also what is called a strike price. If a trader wagers correctly on the market\'s direction and the price at the time of expiry is on the correct side of the strike price, the trader is paid a fixed return regardless of how much the instrument moved. A trader who wagers incorrectly on the market\'s direction loses her/his investment.</string>
+    <string name="futures_market">Futures Market</string>
+    <string name="futures_description">A futures market is an auction market in which participants buy and sell commodity and futures contracts for delivery on a specified future date. Examples of futures markets are the New York Mercantile Exchange, the Kansas City Board of Trade, the Chicago Mercantile Exchange, the Chicago Board of Options Exchange and the Minneapolis Grain Exchange. Originally, trading was carried on through open yelling and hand signals in a trading pit, though in the 21st century, like most other markets, futures exchanges are mostly electronic.</string>
+    <string name="the_actions_market">The actions market</string>
+    <string name="actions_description">When a publicly-traded company issues a corporate action, it is initiating a process that will bring actual change to its stock. By understanding these different types of processes and their effects, an investor can have a clearer picture of what a corporate action indicates about a company\'s financial affairs and how that action will influence the company\'s share price and performance. This knowledge, in turn, will aid the investor in determining whether to buy or sell the stock in question.</string>
+    <string name="favorite">Favorite</string>
+    <string name="edad_usuario">21</string>
+    <string name="broker">Broker</string>
+    <string name="broker_user">Fusion</string>
+    <string name="regresar_a_login">Return to Login</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="newuser_gmail_com">newuser@gmail.com</string>
+    <string name="age">Age</string>
+
+
+
 </resources>

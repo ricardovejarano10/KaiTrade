@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KaiTrade</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_dashboard">Panel</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="title_compound">Interés Compuesto</string>
+    <string name="title_history">Historial</string>
+    <string name="title_charts">Graficas</string>
+
+    <string name="hello_blank_fragment">Nuevo fragment</string>
+    <string name="profile">Perfil</string>
+    <string name="forex">Forex</string>
+    <string name="binary_options">Opciones binarias</string>
+    <string name="futures">Futuros</string>
+    <string name="actions">Acciones</string>
+    <string name="cfds">Cfd\'s</string>
+    <string name="configuration">Configuracion</string>
+    <string name="logout">Salir</string>
+    <string name="open_menu">Abrir Menu</string>
+    <string name="close_menu">Cerrar Menu</string>
+    <string name="tituloHistory">Historial</string>
+    <string name="about">Sobre Kai Trade</string>
+    <string name="password">Contrasena</string>
+    <string name="login">Ingresar</string>
+    <string name="sign_up">Registro</string>
+    <string name="email">Correo</string>
+    <string name="new_user">Nuevo Usuario</string>
+    <string name="forex_description">Forex, también conocido como divisas, divisas o comercio de divisas, es un mercado global descentralizado donde operan todas las monedas del mundo. El mercado de divisas es el mercado más grande y más líquido del mundo, con un volumen diario promedio de transacciones que supera los $ 5 billones. Todas las bolsas de valores combinadas del mundo ni siquiera se acercan a esto. ¿Pero qué significa eso para ti? Eche un vistazo más de cerca a las operaciones de cambio y puede encontrar algunas oportunidades comerciales interesantes que no están disponibles con otras inversiones.</string>
+    <string name="binary_options_market">Mercado de Opciones Binarias</string>
+    <string name="binary_options_description">Las opciones binarias se clasifican como opciones exóticas, pero los binarios son extremadamente simples de usar y comprender funcionalmente. La opción binaria más común es una opción \ "high-low \". Al brindar acceso a acciones, índices, materias primas y divisas, una opción binaria alta-baja también se denomina opción de retorno fijo. Esto se debe a que la opción tiene una fecha / hora de caducidad y también lo que se denomina precio de ejercicio. Si un comerciante apuesta correctamente en la dirección del mercado y el precio en el momento de la expiración está en el lado correcto del precio de ejercicio, al operador se le paga un rendimiento fijo independientemente de cuánto se movió el instrumento. Un comerciante que apuesta incorrectamente en la dirección del mercado pierde su inversión.</string>
+    <string name="futures_market">Mercado de Futuros</string>
+    <string name="futures_description">Un mercado de futuros es un mercado de subastas en el que los participantes compran y venden contratos de productos básicos y futuros para la entrega en una fecha futura específica. Ejemplos de mercados de futuros son el New York Mercantile Exchange, el Kansas City Board of Trade, el Chicago Mercantile Exchange, el Chicago Board of Options Exchange y el Minneapolis Grain Exchange. Originalmente, la negociación se llevaba a cabo a través de gritos abiertos y señales manuales en un pozo comercial, aunque en el siglo XXI, como en la mayoría de los otros mercados, los intercambios de futuros son en su mayoría electrónicos.</string>
+    <string name="the_actions_market">Mercado de acciones</string>
+    <string name="actions_description">Cuando una empresa que cotiza en bolsa emite una acción corporativa, está iniciando un proceso que traerá un cambio real a sus acciones. Al comprender estos diferentes tipos de procesos y sus efectos, un inversor puede tener una idea más clara de lo que una acción corporativa indica sobre los asuntos financieros de una empresa y cómo esa acción influirá en el precio y el rendimiento de las acciones de la compañía. Este conocimiento, a su vez, ayudará al inversor a determinar si comprar o vender las acciones en cuestión.</string>
+    <string name="favorite">Favoritos</string>
+    <string name="edad_usuario">21</string>
+    <string name="broker">Broker</string>
+    <string name="broker_user">Fusion</string>
+    <string name="regresar_a_login">Regresar a Login</string>
+    <string name="edit_profile">Editar perfil</string>
+    <string name="newuser_gmail_com">usuarionuevo@gmail.com</string>
+    <string name="age">Edad</string>
+</resources>

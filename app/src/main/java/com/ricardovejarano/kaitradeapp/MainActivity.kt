@@ -1,5 +1,6 @@
 package com.ricardovejarano.kaitradeapp
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
         transaction.replace(R.id.content, CompoundFragment()).commit()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val ab = supportActionBar
-        ab?.setTitle("Compound").toString()
+        ab?.setTitle(R.string.title_compound).toString()
         drawer.addDrawerListener(this)
         nav.setNavigationItemSelectedListener {setContent(it)}
     }
@@ -73,21 +74,21 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
                 drawer.closeDrawers()
                 transaction.replace(R.id.content, CompoundFragment()).commit()
                 val ab = supportActionBar
-                ab?.setTitle("Compound").toString()
+                ab?.setTitle(R.string.title_compound).toString()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_history -> {
                 drawer.closeDrawers()
                 transaction.replace(R.id.content, HistoryFragment()).commit()
                 val ab = supportActionBar
-                ab?.setTitle("History").toString()
+                ab?.setTitle(R.string.title_history).toString()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_charts -> {
                 drawer.closeDrawers()
                 transaction.replace(R.id.content, ChartsFragment()).commit()
                 val ab = supportActionBar
-                ab?.setTitle("Charts").toString()
+                ab?.setTitle(R.string.title_charts).toString()
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -104,36 +105,37 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
             R.id.nav_profile -> {
                 transaction.replace(R.id.content, UserProfileFragment()).commit()
                 val ab = supportActionBar
-                ab?.setTitle("Profile").toString()
+                ab?.setTitle(R.string.profile).toString()
             }
 
             R.id.nav_forex ->{
             transaction.replace(R.id.content, ForexInfoFragment()).commit()
                 val ab = supportActionBar
-                ab?.setTitle("Forex").toString()
+                ab?.setTitle(R.string.forex).toString()
             }
 
             R.id.nav_binaryOptions ->{
                 transaction.replace(R.id.content, BinaryOptionsInfoFragment()).commit()
                 val ab = supportActionBar
-                ab?.setTitle("Binary Options").toString()
+                ab?.setTitle(R.string.binary_options).toString()
             }
             R.id.nav_futures ->{
                 transaction.replace(R.id.content, FuturesInfoFragment()).commit()
                 val ab = supportActionBar
-                ab?.setTitle("Futures").toString()
+                ab?.setTitle(R.string.futures).toString()
             }
             R.id.nav_actions -> {
                 transaction.replace(R.id.content, ActionsInfoFragment()).commit()
                 val ab = supportActionBar
-                ab?.setTitle("Actions").toString()
+                ab?.setTitle(R.string.futures).toString()
             }
             R.id.nav_configuration -> {
                 transaction.replace(R.id.content, ConfigurationFragment()).commit()
                 val ab = supportActionBar
-                ab?.setTitle("About").toString()
+                ab?.setTitle(R.string.about).toString()
             }
             R.id.nav_logout -> {
+                getSharedPreferences("preferencias", Context.MODE_PRIVATE).edit().putBoolean("logged",false).apply()
                 startActivity(intent)
             }
 
