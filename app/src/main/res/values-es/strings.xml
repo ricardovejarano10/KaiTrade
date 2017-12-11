@@ -42,4 +42,9 @@
     <string name="edit_profile">Editar perfil</string>
     <string name="newuser_gmail_com">usuarionuevo@gmail.com</string>
     <string name="age">Edad</string>
+    <string name="about_description">KaiTrade nació como una aplicación que busca ayudar a todos los traders en el mundo a realizar un seguimiento de sus operaciones y así aumentar sus ingresos y consistencia</string>
+    <string name="created">Creado por Ricardo Vejarano</string>
+    <string name="signupError">Error en el formulario, el usuario no fue creado</string>
+    <string name="signupOk">El usuario fue creado satisfactoriamente</string>
+    <string name="loginError">Email o contraseña incorrectos</string>
 </resources>

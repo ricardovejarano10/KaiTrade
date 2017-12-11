@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "15569159451",
+    "firebase_url": "https://kaitrade-19f69.firebaseio.com",
+    "project_id": "kaitrade-19f69",
+    "storage_bucket": "kaitrade-19f69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15569159451:android:9c3df9ab1b4c6694",
+        "android_client_info": {
+          "package_name": "com.ricardovejarano.kaitradeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15569159451-vbqjcrq192l5e7bprqhq04rjqgjm8tvt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ricardovejarano.kaitradeapp",
+            "certificate_hash": "6c86124af1d2e1cdade13a324a7f413386483922"
+          }
+        },
+        {
+          "client_id": "15569159451-8cb6q9l91lg2nr5c3bl2g7ninu8dn3dk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNXHNu1pD63-ypO3PhaEtQxrzh9agUAaI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15569159451-8cb6q9l91lg2nr5c3bl2g7ninu8dn3dk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

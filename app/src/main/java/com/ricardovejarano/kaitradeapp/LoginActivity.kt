@@ -4,12 +4,20 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.databinding.DataBindingUtil
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.util.Log
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.ricardovejarano.kaitradeapp.databinding.ActivityLoginBinding
+import kotlinx.android.synthetic.main.activity_login.*
+
+import org.jetbrains.anko.toast
 
 
 class LoginActivity : AppCompatActivity() {
+
+    private var mAuth: FirebaseAuth? = null
 
     val preferences:SharedPreferences by lazy{
         getSharedPreferences("preferencias", Context.MODE_PRIVATE)
@@ -18,7 +26,7 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        //Se evalua si el usuario ya esta loggeado
+       //Se evalua si el usuario ya esta loggeado
        val logged = preferences.getBoolean("logged",false)
         if(logged){
             val intent = Intent(this, MainActivity::class.java)
@@ -27,21 +35,44 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
+        //Se crea una instancia de autenticacion
+        mAuth = FirebaseAuth.getInstance()
+
         val binding: ActivityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
         binding.handler = this
+
 
     }
 
     fun login(){
-        preferences.edit().putBoolean("logged",true).apply()
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-        finish()
+        //
+
+        val email = editText.text.toString()
+        val password = editText2.text.toString()
+        calllogin(email,password)
+
+
     }
 
     fun signup(){
         val intent = Intent(this, SignUpActivity::class.java)
         startActivity(intent)
+
+    }
+
+    fun calllogin(email:String,password:String){
+
+        mAuth?.signInWithEmailAndPassword(email, password)
+                ?.addOnCompleteListener(this) { task ->
+                    if (task.isSuccessful) {
+                        preferences.edit().putBoolean("logged",true).apply()
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        toast(R.string.loginError)
+                    }
+                }
 
     }
 }

@@ -9,12 +9,14 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
+import com.google.firebase.auth.FirebaseAuth
 import com.ricardovejarano.kaitradeapp.fragments.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
 
+    private var mAuth: FirebaseAuth? = null
 
     val toggle: ActionBarDrawerToggle by lazy{
         ActionBarDrawerToggle(this, drawer, R.string.open_menu, R.string.close_menu)
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        mAuth = FirebaseAuth.getInstance()
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
         val manager = supportFragmentManager
@@ -135,6 +139,7 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
                 ab?.setTitle(R.string.about).toString()
             }
             R.id.nav_logout -> {
+                mAuth?.signOut()
                 getSharedPreferences("preferencias", Context.MODE_PRIVATE).edit().putBoolean("logged",false).apply()
                 startActivity(intent)
             }
