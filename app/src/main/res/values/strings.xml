@@ -45,6 +45,7 @@
     <string name="signupError">Error in the form, the user was not created</string>
     <string name="signupOk">The user was created successfully</string>
     <string name="loginError">Wrong email or password</string>
+    <string name="empty">Fields empty</string>
 
 
 

@@ -6,9 +6,7 @@ import android.content.SharedPreferences
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.ricardovejarano.kaitradeapp.databinding.ActivityLoginBinding
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -24,20 +22,20 @@ class LoginActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+
 
        //Se evalua si el usuario ya esta loggeado
        val logged = preferences.getBoolean("logged",false)
+
+        super.onCreate(savedInstanceState)
         if(logged){
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
             return
         }
-
         //Se crea una instancia de autenticacion
         mAuth = FirebaseAuth.getInstance()
-
         val binding: ActivityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login)
         binding.handler = this
 
@@ -47,9 +45,19 @@ class LoginActivity : AppCompatActivity() {
     fun login(){
         //
 
-        val email = editText.text.toString()
-        val password = editText2.text.toString()
-        calllogin(email,password)
+        if(editText.text.isEmpty() || editText2.text.isEmpty()){
+            toast(R.string.empty)
+            return
+        }
+        else{
+
+            val email = editText.text.toString()
+            val password = editText2.text.toString()
+            calllogin(email,password)
+        }
+
+
+
 
 
     }
@@ -71,8 +79,9 @@ class LoginActivity : AppCompatActivity() {
                         finish()
                     } else {
                         toast(R.string.loginError)
+                        }
                     }
-                }
-
     }
+
 }
+

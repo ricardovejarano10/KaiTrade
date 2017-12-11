@@ -24,9 +24,15 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     fun signup(){
-        val email = editText3.text.toString()
-        val pass  = editText4.text.toString()
-        callsignup(email,pass)
+
+        if(editText3.text.isEmpty() || editText4.text.isEmpty()){
+            toast(R.string.empty)
+            return
+        }  else {
+            val email = editText3.text.toString()
+            val pass = editText4.text.toString()
+            callsignup(email, pass)
+        }
     }
 
     fun returntologin(){

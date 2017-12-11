@@ -47,4 +47,5 @@
     <string name="signupError">Error en el formulario, el usuario no fue creado</string>
     <string name="signupOk">El usuario fue creado satisfactoriamente</string>
     <string name="loginError">Email o contraseña incorrectos</string>
+    <string name="empty">Campos en blanco</string>
 </resources>
