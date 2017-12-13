@@ -40,4 +40,8 @@
     <dimen name="veinticincodps">25dp</dimen>
     <dimen name="treintayseiddps">36dp</dimen>
     <dimen name="ochentadps">80dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="cientosetentayundps">171dp</dimen>
+    <dimen name="trecientosdps">300dp</dimen>
+    <dimen name="quincedps">15dp</dimen>
 </resources>

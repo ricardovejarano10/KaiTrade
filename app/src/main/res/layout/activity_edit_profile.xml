@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.ricardovejarano.kaitradeapp.EditProfileActivity">
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ochodps"
+        android:layout_marginStart="@dimen/ochodps"
+        android:layout_marginTop="@dimen/veinticuatrodps"
+        android:text="@string/edit_your_profile"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:textSize="@dimen/cuarentadps"
+        tools:text="@string/edit_your_profile" />
+
+    <EditText
+        android:id="@+id/field_name"
+        android:layout_width="@dimen/cerodps"
+        android:layout_height="@dimen/cuarentadps"
+        android:layout_marginEnd="@dimen/diesyseiddps"
+        android:layout_marginStart="@dimen/diesyseiddps"
+        android:layout_marginTop="@dimen/veinticuatrodps"
+        android:background="@color/dark_grey"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <EditText
+        android:id="@+id/field_last_name"
+        android:layout_width="@dimen/cerodps"
+        android:layout_height="@dimen/cuarentadps"
+        android:layout_marginEnd="@dimen/diesyseiddps"
+        android:layout_marginStart="@dimen/diesyseiddps"
+        android:layout_marginTop="@dimen/ochodps"
+        android:background="@color/dark_grey"
+        android:ems="10"
+        android:hint="@string/last_name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_name" />
+
+    <EditText
+        android:id="@+id/field_age"
+        android:layout_width="@dimen/cerodps"
+        android:layout_height="@dimen/cuarentadps"
+        android:layout_marginEnd="@dimen/diesyseiddps"
+        android:layout_marginStart="@dimen/diesyseiddps"
+        android:layout_marginTop="@dimen/ochodps"
+        android:background="@color/dark_grey"
+        android:ems="10"
+        android:hint="@string/age"
+        android:inputType="textPersonName|number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_last_name" />
+
+    <EditText
+        android:id="@+id/field_Market"
+        android:layout_width="@dimen/cerodps"
+        android:layout_height="@dimen/cuarentadps"
+        android:layout_marginEnd="@dimen/diesyseiddps"
+        android:layout_marginStart="@dimen/diesyseiddps"
+        android:layout_marginTop="@dimen/ochodps"
+        android:background="@color/dark_grey"
+        android:ems="10"
+        android:hint="@string/favorite_market"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_age" />
+
+    <EditText
+        android:id="@+id/field_broker"
+        android:layout_width="@dimen/cerodps"
+        android:layout_height="@dimen/cuarentadps"
+        android:layout_marginEnd="@dimen/diesyseiddps"
+        android:layout_marginStart="@dimen/diesyseiddps"
+        android:layout_marginTop="@dimen/ochodps"
+        android:background="@color/dark_grey"
+        android:ems="10"
+        android:hint="@string/broker"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_Market" />
+
+    <Button
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ochodps"
+        android:layout_marginStart="@dimen/ochodps"
+        android:layout_marginTop="@dimen/veinticuatrodps"
+        android:text="@string/save_info"
+        android:background="@drawable/buttonstylegradient"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/field_broker"
+        tools:text="@string/save_info" />
+</android.support.constraint.ConstraintLayout>

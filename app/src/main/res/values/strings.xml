@@ -46,8 +46,24 @@
     <string name="signupOk">The user was created successfully</string>
     <string name="loginError">Wrong email or password</string>
     <string name="empty">Fields empty</string>
-
-
+    <string name="title_activity_edit_perfil">EditPerfilActivity</string>
+    <string name="edit_profile_user">Edit profile</string>
+    <string name="edit_your_profile">Edit your Profile</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="favorite_market">Favorite Market</string>
+    <string name="save_info">Save Info</string>
+    <string name="edited_profile">Profile Edited</string>
+    <string name="edit">edit</string>
+    <string name="registred">registrado</string>
+    <string name="pair">Pair</string>
+    <string name="register">Register</string>
+    <string name="investment_or_lot">Investment or Lot</string>
+    <string name="date_format">Date: DD/MM/YY</string>
+    <string name="payout">Payout</string>
+    <string name="your_trading_history">Your Trading History</string>
+    <string name="investment">Investment</string>
+    <string name="date">Date</string>
 
 
 </resources>

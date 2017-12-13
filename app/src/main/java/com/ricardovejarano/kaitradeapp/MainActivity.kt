@@ -10,8 +10,15 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import android.view.View
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.ricardovejarano.kaitradeapp.fragments.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_user_profile.*
+import kotlinx.android.synthetic.main.nav_header.*
+import org.jetbrains.anko.support.v4.toast
 
 
 class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
@@ -37,6 +44,32 @@ class MainActivity : AppCompatActivity(), DrawerLayout.DrawerListener {
         ab?.setTitle(R.string.title_compound).toString()
         drawer.addDrawerListener(this)
         nav.setNavigationItemSelectedListener {setContent(it)}
+
+        //Para el nombre del usuario
+
+        //Variables para Firebase
+        val user = FirebaseAuth.getInstance().currentUser
+        val id = user?.uid
+        val email = user?.email
+        val uDatabase = FirebaseDatabase.getInstance().getReference("profile").child(id).child("full")
+
+        uDatabase.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val value = dataSnapshot?.getValue(String::class.java).toString()
+
+                if(dataSnapshot.exists()){
+                   navigationName.setText(value)
+
+                }else{
+                    navigationName.setText(R.string.edit_your_profile)
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+
+            }
+        })
+
+
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {

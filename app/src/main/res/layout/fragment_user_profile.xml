@@ -8,6 +8,7 @@
     >
 
     <LinearLayout
+        android:id="@+id/containerUserProfile"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
@@ -18,27 +19,28 @@
             android:layout_height="@dimen/trecientosveinticincodps">
 
             <LinearLayout
-                android:background="@drawable/gradient"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/doscientosdps"
+                android:background="@drawable/gradient"
                 android:orientation="vertical">
 
                 <ImageView
-                    android:layout_marginTop="@dimen/cuarentaycincodps"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="@dimen/ciendps"
                     android:layout_height="@dimen/ciendps"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/cuarentaycincodps"
                     android:src="@drawable/newuser" />
 
                 <TextView
-                    android:layout_marginTop="@dimen/diezdps"
-                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/textViewName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/diezdps"
                     android:text="@string/new_user"
                     android:textColor="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/veintiunsp" />
+                    android:textSize="@dimen/veintiunsp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <android.support.v7.widget.CardView
@@ -54,72 +56,74 @@
                     android:weightSum="3">
 
                     <LinearLayout
-                        android:gravity="center"
-                        android:orientation="vertical"
                         android:layout_width="@dimen/cerodps"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:layout_height="match_parent">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/favorite"
-                            android:textStyle="bold"
-                            android:textSize="@dimen/veintesp" />
+                            android:textSize="@dimen/veintesp"
+                            android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/textViewMarket"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/diezdps"
                             android:text="@string/forex"
-                            android:textSize="@dimen/veintesp"
-                            android:paddingTop="@dimen/diezdps" />
+                            android:textSize="@dimen/veintesp" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:gravity="center"
-                        android:orientation="vertical"
                         android:layout_width="@dimen/cerodps"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:layout_height="match_parent">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/age"
-                            android:textStyle="bold"
-                            android:textSize="@dimen/veintesp" />
+                            android:textSize="@dimen/veintesp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/edad_usuario"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
                             android:text="@string/edad_usuario"
-                            android:textSize="20sp"
-                            android:paddingTop="10dp" />
+                            android:textSize="20sp" />
 
                     </LinearLayout>
 
                     <LinearLayout
-                        android:gravity="center"
-                        android:orientation="vertical"
                         android:layout_width="@dimen/cerodps"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:layout_height="match_parent">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/broker"
-                            android:textStyle="bold"
-                            android:textSize="@dimen/veintesp" />
+                            android:textSize="@dimen/veintesp"
+                            android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/textEditBroker"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/diezdps"
                             android:text="@string/broker_user"
-                            android:textSize="@dimen/veintesp"
-                            android:paddingTop="@dimen/diezdps" />
+                            android:textSize="@dimen/veintesp" />
 
                     </LinearLayout>
                 </LinearLayout>
@@ -145,6 +149,7 @@
                     android:src="@drawable/ic_email_user" />
 
                 <TextView
+                    android:id="@+id/textViewEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -157,6 +162,7 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/btn_editProfile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
