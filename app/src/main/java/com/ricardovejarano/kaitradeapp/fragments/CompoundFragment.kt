@@ -86,48 +86,49 @@ class CompoundFragment : Fragment() {
 
     fun calculate(view: View){
 
-        if(!editTextInitial.text.isEmpty() || !editTextInvestment.text.isEmpty() || !editTextNumber.text.isEmpty()){
-
-        val number = editTextNumber.text().toInt()
-
-        val initial = editTextInitial.text().toInt().toFloat()
-        val percent = editTextPercent.text().toInt().toFloat()
-        val percentOperable:Float = (percent/100)
-        val arrayAdapter = ArrayAdapter(activity, android.R.layout.simple_list_item_1, uCompound)
-        listViewCompound.adapter = arrayAdapter
-        uCompound.clear()
-        arrayAdapter.notifyDataSetChanged()
-
-         val user = FirebaseAuth.getInstance().currentUser
-         val id = user?.uid
-         val database = FirebaseDatabase.getInstance()
-         val myRef1 = database.getReference("compound").child(id)
-            myRef1.removeValue()
-        for (i in 0 until number) {
-
-            if(i ==0){
-                xCompound =  initial
-            }else{
-                xCompound = value
-            }
-
-            value = (xCompound * percentOperable) + (xCompound)
-            val goSave = (i+1).toString() + "                    " + "%.2f".format(xCompound) + "                     " + "%.2f".format(value)
-            uCompound.add(goSave)
-            arrayAdapter.notifyDataSetChanged()
-
-            myRef1.push().setValue(goSave)
-
-        }
-            toast(getString(R.string.registred))
+        if(editTextInitial.text.isEmpty() || editTextPercent.text.isEmpty() || editTextNumber.text.isEmpty()){
+            toast(R.string.empty)
 
         }else{
 
-            toast(R.string.empty)
+
+            val number = editTextNumber.text().toInt()
+
+            val initial = editTextInitial.text().toInt().toFloat()
+            val percent = editTextPercent.text().toInt().toFloat()
+            val percentOperable:Float = (percent/100)
+            val arrayAdapter = ArrayAdapter(activity, android.R.layout.simple_list_item_1, uCompound)
+            listViewCompound.adapter = arrayAdapter
+            uCompound.clear()
+            arrayAdapter.notifyDataSetChanged()
+
+            val user = FirebaseAuth.getInstance().currentUser
+            val id = user?.uid
+            val database = FirebaseDatabase.getInstance()
+            val myRef1 = database.getReference("compound").child(id)
+            myRef1.removeValue()
+            for (i in 0 until number) {
+
+                if(i ==0){
+                    xCompound =  initial
+                }else{
+                    xCompound = value
+                }
+
+                value = (xCompound * percentOperable) + (xCompound)
+                val goSave = (i+1).toString() + "                    " + "%.2f".format(xCompound) + "                     " + "%.2f".format(value)
+                uCompound.add(goSave)
+                arrayAdapter.notifyDataSetChanged()
+
+                myRef1.push().setValue(goSave)
+
+            }
 
         }
 
-    }
 
 
+
+
+        }
 }

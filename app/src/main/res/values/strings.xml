@@ -65,11 +65,16 @@
     <string name="investment">Investment</string>
     <string name="date">Date</string>
     <string name="load_image">Load Image</string>
-    <string name="what_s_your_compound_plan">What\'s your compound plan</string>
+    <string name="what_s_your_compound_plan">What's your compound plan</string>
     <string name="initial_investmen">Investmen [$]</string>
     <string name="number_of_compounds">Number of Compounds</string>
     <string name="broker_percent">Broker Percent [%]</string>
     <string name="calculate">Calculate</string>
+    <string name="win">Win</string>
+    <string name="lose">Lose</string>
+    <string name="draw">Draw</string>
+    <string name="trades">Trades</string>
+    <string name="chart_for_your_trading">Performance graph</string>
 
 
 </resources>

@@ -11,11 +11,14 @@ import kotlinx.android.synthetic.main.fragment_history.*
 import org.jetbrains.anko.support.v4.toast
 import com.google.firebase.database.*
 import android.widget.ArrayAdapter
+import kotlinx.android.synthetic.main.fragment_user_profile.*
 
 
 class HistoryFragment : Fragment() {
 
     private val uHistory = ArrayList<String>()
+    var winRate:Int = 0
+    var loseRate:Int = 0
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_history, container, false)
@@ -32,6 +35,50 @@ class HistoryFragment : Fragment() {
         val user = FirebaseAuth.getInstance().currentUser
         val id = user?.uid
         val uDatabase = FirebaseDatabase.getInstance().getReference("history").child(id)
+
+
+
+        //Para los datos de winRate y loseRate
+
+        val uDatabaseWin = FirebaseDatabase.getInstance().getReference("trades").child(id).child("win")
+
+        uDatabaseWin.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val value = dataSnapshot?.getValue(Int::class.java)
+
+                if(dataSnapshot.exists()){
+                    winRate = value!!
+
+                }else{
+                    winRate = 0
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+                toast("error")
+            }
+        })
+
+
+        val uDatabaseLose = FirebaseDatabase.getInstance().getReference("trades").child(id).child("lose")
+
+        uDatabaseLose.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val value = dataSnapshot?.getValue(Int::class.java)
+
+                if(dataSnapshot.exists()){
+                    loseRate = value!!
+
+                }else{
+                    loseRate = 0
+                }
+            }
+            override fun onCancelled(error: DatabaseError) {
+                toast("error")
+            }
+        })
+
+
+        //
 
 
 
@@ -153,6 +200,18 @@ class HistoryFragment : Fragment() {
                 val infoRegister = date+ "      " + pair + "       " + investment + "               " + payout
 
                 val myRef1 = database.getReference("history").child(id)
+                val myRef2 = database.getReference("trades").child(id)
+
+                if(payout == "0"){
+                    val updateLose = loseRate + 1
+                    myRef2.child("lose").setValue(updateLose)
+
+                }else{
+                    val updateWin = winRate + 1
+                    myRef2.child("win").setValue(updateWin)
+                }
+
+                //myRef2.child("win").setValue(payout)
                 myRef1.push().setValue(infoRegister)
                 toast(getString(R.string.registred))
             }

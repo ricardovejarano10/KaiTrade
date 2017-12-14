@@ -27,6 +27,7 @@
         android:layout_marginStart="@dimen/ochodps"
         android:layout_marginTop="@dimen/diesyseiddps"
         android:background="@drawable/buttonstylegradient"
+        android:textColor="@color/white"
         android:text="@string/register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

@@ -65,5 +65,16 @@
     <string name="your_trading_history">Tu Historial de Trading</string>
     <string name="investment">Invertido</string>
     <string name="date">Fecha</string>
+    <string name="load_image">Cargar Imagen</string>
+    <string name="what_s_your_compound_plan">Cual es tu plan?</string>
+    <string name="initial_investmen">Invertido [$]</string>
+    <string name="number_of_compounds">Numero de compuestos</string>
+    <string name="broker_percent">Broker [%]</string>
+    <string name="calculate">Calcular</string>
+    <string name="win">Ganados</string>
+    <string name="lose">Perdidos</string>
+    <string name="draw">Dibujar</string>
+    <string name="trades">Operaciones</string>
+    <string name="chart_for_your_trading">Grafica de rendimiento</string>
 
 </resources>
