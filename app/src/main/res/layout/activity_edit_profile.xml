@@ -16,11 +16,11 @@
         android:layout_marginTop="@dimen/veinticuatrodps"
         android:text="@string/edit_your_profile"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/white"
+        android:textSize="@dimen/cuarentadps"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/white"
-        android:textSize="@dimen/cuarentadps"
         tools:text="@string/edit_your_profile" />
 
     <EditText
@@ -102,14 +102,26 @@
         android:id="@+id/btn_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/ochodps"
-        android:layout_marginStart="@dimen/ochodps"
-        android:layout_marginTop="@dimen/veinticuatrodps"
-        android:text="@string/save_info"
+        android:layout_marginTop="24dp"
         android:background="@drawable/buttonstylegradient"
+        android:text="@string/save_info"
         android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_load"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/field_broker"
         tools:text="@string/save_info" />
+
+    <Button
+        android:id="@+id/btn_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:background="@drawable/buttonstylegradient"
+        android:text="@string/load_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_edit"
+        app:layout_constraintTop_toBottomOf="@+id/field_broker" />
 </android.support.constraint.ConstraintLayout>

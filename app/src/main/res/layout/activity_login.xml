@@ -38,7 +38,7 @@
             android:background="@color/dark_grey"
             android:drawableLeft="@drawable/ic_action_user"
             android:hint="@string/email"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             android:textSize="@dimen/activity_vertical_margin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

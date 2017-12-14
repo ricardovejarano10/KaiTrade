@@ -150,7 +150,7 @@ class HistoryFragment : Fragment() {
                 val id = user.uid
                 val database = FirebaseDatabase.getInstance()
 
-                val infoRegister = pair+ "             " + investment + "           " + date + "         " + payout
+                val infoRegister = date+ "      " + pair + "       " + investment + "               " + payout
 
                 val myRef1 = database.getReference("history").child(id)
                 myRef1.push().setValue(infoRegister)

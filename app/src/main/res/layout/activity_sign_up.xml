@@ -39,10 +39,10 @@
             android:layout_marginStart="@dimen/cuarentadps"
             android:layout_marginTop="@dimen/margintopsigup"
             android:background="@color/dark_grey"
+            android:drawableLeft="@drawable/ic_action_user"
             android:ems="10"
             android:hint="@string/email"
-            android:drawableLeft="@drawable/ic_action_user"
-            android:inputType="textPersonName"
+            android:inputType="textEmailAddress"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />

@@ -25,6 +25,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/userImage"
                     android:layout_width="@dimen/ciendps"
                     android:layout_height="@dimen/ciendps"
                     android:layout_gravity="center_horizontal"

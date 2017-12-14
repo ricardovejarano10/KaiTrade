@@ -1,5 +1,7 @@
 package com.ricardovejarano.kaitradeapp
 
+import android.app.Activity
+import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
@@ -14,9 +16,17 @@ import kotlinx.android.synthetic.main.fragment_user_profile.*
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.support.v4.toast
 import org.jetbrains.anko.toast
+import android.content.Intent
+import org.jetbrains.anko.startActivityForResult
+import android.provider.MediaStore
+import android.graphics.Bitmap
+import com.google.firebase.storage.FirebaseStorage
 
 
 class EditProfileActivity : AppCompatActivity() {
+
+    private var filePath: Uri? = null
+    private val PICK_IMAGE_REQUEST = 17
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,9 +35,11 @@ class EditProfileActivity : AppCompatActivity() {
         val ab = supportActionBar
         ab?.setTitle(R.string.edit_profile_user).toString()
         btn_edit.setOnClickListener(this::editProfile)
+        btn_load.setOnClickListener(this::uploadImage)
 
         //primero se trae la informacion del usuario si es que existe
         val user = FirebaseAuth.getInstance().currentUser
+        val storageRef = FirebaseStorage.getInstance().getReference()
         val id = user?.uid
         val uDatabase = FirebaseDatabase.getInstance().getReference("profile").child(id).child("name")
         val uDatabaseLastName = FirebaseDatabase.getInstance().getReference("profile").child(id).child("lastName")
@@ -118,9 +130,6 @@ class EditProfileActivity : AppCompatActivity() {
     fun editProfile(view: View){
 
 
-
-
-
         //se verifica que ningún campo este sin llenar
         if(field_name.text.isEmpty() || field_last_name.text.isEmpty() || field_age.text.isEmpty() || field_broker.text.isEmpty() || field_Market.text.isEmpty()){
             toast(R.string.empty)
@@ -162,4 +171,33 @@ class EditProfileActivity : AppCompatActivity() {
             else -> return super.onOptionsItemSelected(item)
         }
     }
+
+    fun uploadImage(view: View){
+
+        //Primero se selecciona la imagen
+        val intent = Intent()
+        intent.setType("image/*")
+        intent.setAction(Intent.ACTION_GET_CONTENT)
+        startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST)
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+       // if(requestCode == PICK_IMAGE_REQUEST && resultCode == Activity.RESULT_OK){
+            filePath = data?.data
+            try {
+                val bitmap = MediaStore.Images.Media.getBitmap(contentResolver,filePath)
+                userImage.setImageBitmap(bitmap)
+                toast("Imagen Puesta")
+            }
+            catch(e: Exception){
+                e.printStackTrace()
+            }
+
+       // }
+
+    }
+
 }

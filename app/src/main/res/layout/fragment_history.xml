@@ -9,7 +9,7 @@
 
     <EditText
         android:id="@+id/editTextPair"
-        android:layout_width="171dp"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/veinticuatrodps"
         android:layout_marginTop="@dimen/veinticuatrodps"
@@ -35,37 +35,37 @@
 
     <EditText
         android:id="@+id/editTextInvestment"
-        android:layout_width="@dimen/cientosetentayundps"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/veinticuatrodps"
         android:layout_marginTop="@dimen/veinticuatrodps"
         android:ems="10"
         android:hint="@string/investment_or_lot"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
     <EditText
         android:id="@+id/editTextDate"
-        android:layout_width="@dimen/cientosetentayundps"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/veinticuatrodps"
         android:layout_marginTop="@dimen/diesyseiddps"
         android:ems="10"
         android:hint="@string/date_format"
-        android:inputType="datetime"
+        android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPair" />
 
     <EditText
         android:id="@+id/editTextPayout"
-        android:layout_width="@dimen/cientosetentayundps"
+        android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/veinticuatrodps"
         android:layout_marginTop="@dimen/diesyseiddps"
         android:ems="10"
         android:hint="@string/payout"
-        android:inputType="textPersonName"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextInvestment" />
 
@@ -86,10 +86,9 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/cerodps"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="@dimen/ochodps"
-        android:text="@string/pair"
-        app:layout_constraintEnd_toStartOf="@+id/textView15"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:text="@string/date"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonSave" />
 
@@ -97,10 +96,9 @@
         android:id="@+id/textView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="8dp"
-        android:text="@string/investment"
-        app:layout_constraintEnd_toStartOf="@+id/textView16"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:text="@string/pair"
         app:layout_constraintStart_toEndOf="@+id/textView14"
         app:layout_constraintTop_toBottomOf="@+id/buttonSave" />
 
@@ -108,10 +106,12 @@
         android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/ochodps"
-        android:text="@string/date"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/investment"
         app:layout_constraintEnd_toStartOf="@+id/textView17"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.543"
         app:layout_constraintStart_toEndOf="@+id/textView15"
         app:layout_constraintTop_toBottomOf="@+id/buttonSave" />
 
@@ -119,19 +119,18 @@
         android:id="@+id/textView17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/ochodps"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="8dp"
         android:text="@string/payout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toBottomOf="@+id/buttonSave" />
 
     <ListView
         android:id="@+id/listViewHistory"
         android:layout_width="@dimen/cerodps"
         android:layout_height="@dimen/trecientosdps"
-        android:layout_marginEnd="@dimen/veinticuatrodps"
-        android:layout_marginStart="@dimen/veinticuatrodps"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="@dimen/ochodps"
         android:paddingBottom="@dimen/quincedps"
         app:layout_constraintEnd_toEndOf="parent"
